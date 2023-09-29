@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="wrapping text and centering vertically">
+    <title>Document</title>
+    <style>
+        :root {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        *, ::after ::before {
+            box-sizing: inherit;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0.5rem;
+        }
+        ul > li {
+            display: inline;
+            margin: .25rem; 
+        }
+        nav > ul > li a {
+            text-decoration: none;
+            color: coral;
+        }
+        nav {
+            border-bottom: 1px solid lightgray;
+        }
+        .floated-right {
+            float: right;
+        }
+        .floated-left {
+            float:left
+        }
+        h1 > b {
+            color: indianred
+        }
+        img {
+            width: 30%;
+            padding: 0;
+            float: left;
+            border-radius: 5%;
+            border: 1px solid black;
+            margin: 10px;
+        }
+        div.main {
+            padding-left: 6rem;
+            padding-right: 6rem;
+        } 
+        .circle {
+            float: left;
+            width: 250px;
+            height: 250px;
+            border-radius: 150px;
+            margin: .5rem;
+            background-color: black;
+            color: white;
+            text-align: center;
+            
+        }
+
+        .vcenter .circle {
+            line-height: 200px;
+        }
+        div.circle > h2 {
+            font-size: 35px;
+        }
+        .colunm1_3 {
+            background-color: grey;
+            width: 25%;
+            color:white
+        }
+        .colunm2 {
+            background-color: black;
+            width: 50%;
+            color: white;
+        }
+        .table_cells {
+            display: table;
+        }
+        .table_cells .colunm1_3 {
+            display: table-cell;
+        }
+        .table_cells .colunm2 {
+            display: table-cell;
+        }
+        footer {
+            border-top: 1px solid lightgrey;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+<nav class="clearfix">
+    <ul class="floated-left">
+        <li><b>Floated menus:</b></li>
+        <li><a href="one">One</a></li>
+        <li><a href="two">Two</a></li>
+    </ul>
+    
+    <ul class="floated-right">
+        <li><a href="three">Three</a></li>
+        <li><a href="four">Four</a></li>
+    </ul>
+    
+</nav>
+    <div class="main">
+        <h1><b>&lt;Article 1&gt;:</b>Wrapping text around an image</h1>
+        <img src="https://images.unsplash.com/photo-1564395832344-4d5520ae70c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3084&q=80" alt="black and white photo">
+        <h2>A secondary heading</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, tempora cumque, inventore eveniet vitae commodi debitis delectus adipisci assumenda optio ex esse cum? Facilis, voluptatem. Omnis cumque aliquam temporibus dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui id optio quibusdam enim debitis. Corrupti doloribus recusandae tempora, tenetur alias nihil provident minima vitae, explicabo facilis dolorem sapiente. Repellat, sequi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique hic, velit nesciunt, aliquid officiis cum soluta aperiam mollitia quas veniam at repellat commodi, dignissimos accusantium nisi! Officiis sed repellendus cum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos similique temporibus quia velit quas sunt inventore, molestias dicta nam minima delectus incidunt cumque porro ea. Fuga sapiente dignissimos sunt iusto? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum officia mollitia voluptate beatae, culpa iure iste hic amet alias. Atque eveniet ducimus obcaecati asperiores rerum, maxime necessitatibus maiores cum expedita!</p>
+    
+    </div>
+    <div class="main">
+        <h1><b>&lt;Article 2&gt;:</b>Centering text vertically</h1>
+        <div class="clearfix vcenter">
+            <div class="circle"><h2>Selectors</h2></div>
+            <div class="circle"><h2>Inheritance</h2>I</div>
+            <div class="circle"><h2>Cascade</h2></div>
+            <div class="circle"><h2>Specificity</h2></div>
+        </div>
+    </div>
+    <div class="main">
+        <h1><b>&lt;Article 3&gt;:</b>Equal-height columns</h1>
+        <div class="table_cells">
+            <div class="colunm1_3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores repellendus quia officiis excepturi hic iste ullam, totam ea ipsam tempore exercitationem reprehenderit. Quo fuga explicabo exercitationem quae! Molestias, odio quis?</div>
+            <div class="colunm2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur numquam voluptatem quaerat expedita sapiente accusantium! Perferendis molestias animi quo! Aperiam cum doloribus quasi distinctio et laborum est aut facere tempora.</div>
+            <div class="colunm1_3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis deleniti consectetur porro cum sunt in maxime modi. In exercitationem doloremque cum alias, ipsam pariatur, praesentium ea nam culpa assumenda sunt.</div>
+        </div>
+    </div>
+    <footer class="clearfix">
+    <p class="floated-left"><b>Jessica Nakayu</b></p>
+    <p class="floated-right">&copy;All rights reserved</p>
+</footer>
+</body>
+
+</html>
